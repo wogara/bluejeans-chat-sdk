@@ -1,0 +1,17 @@
+{
+  "name": "bluejeans-chat-sdk",
+  "version": "1.0.0",
+  "description": "SDK for easy chat integration with BlueJeans meetings",
+  "main": "index.js",
+  "dependencies": {
+    "myclass": "^1.0.2",
+    "underscore": "^1.9.1",
+    "sockjs-client": "^1.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William O'Gara",
+  "license": "MIT"
+}
