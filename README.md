@@ -2,6 +2,12 @@
 
 this SDK enables users to easily integrate the bluejeans chat feature into any application
 
+# Installation
+
+To use the library locally without publishing to a remote npm registry, first install the dependencies by changing into the directory containing package.json (and this README). Then, in the command window, run:
+
+npm install
+
 # Getting Started
 Please follow the installation instructions, create a BlueJeans meeting using our API, obtain the meeting ID, and execute the following JS code:
 
