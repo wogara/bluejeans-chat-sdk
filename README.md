@@ -38,7 +38,7 @@ After this code has been executed, one can now send messages to the chat using t
 
 var message = "Welcome to the Chat!";
 
-BJChat.sendMessage(message);
+chatApp.sendMessage(message);
 
 
 
