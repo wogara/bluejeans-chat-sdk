@@ -26,7 +26,9 @@ var handler =
 var chatModule = require('./chatSDK.js');
 
 let chatApp = new chatModule.chatSDK();
+
 chatApp.onReceiveMessage(handler);
+
 chatApp.connectToMeeting(meetingID);
 
 Here, the handler is the function that
