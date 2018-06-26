@@ -14,10 +14,15 @@ Please follow the installation instructions, create a BlueJeans meeting using ou
 
 var handler =
 		{
+		
     			onMessage: function(event, edata)
+			
     			{
+			
 				console.log("Message Received: " + edata.body);
+				
     			}
+			
 		};
 
 var meetingID = "123456789";
