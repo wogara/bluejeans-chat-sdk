@@ -16,9 +16,7 @@ var handler =
 		{
     			onMessage: function(event, edata)
     			{
-				var mt = new Date(edata.timestamp).toLocaleString() + ", " + edata.sender.name;
-				console.log(mt);
-				console.log("--> " + edata.body);
+				console.log("Message Received: " + edata.body);
     			}
 		};
 
