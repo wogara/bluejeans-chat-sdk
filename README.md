@@ -1,4 +1,4 @@
-![Alt text](downloads/927.png?raw=true "Title")
+
 
 # bluejeans-chat-sdk
 
