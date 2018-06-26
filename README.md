@@ -1,4 +1,4 @@
-	<img width="653" alt="927" src="https://user-images.githubusercontent.com/39812727/41936965-d940135e-7943-11e8-9322-5e4c02eb0c63.png">
+  <img width="653" alt="927" src="https://user-images.githubusercontent.com/39812727/41936965-d940135e-7943-11e8-9322-5e4c02eb0c63.png">
 
 # bluejeans-chat-sdk
 
