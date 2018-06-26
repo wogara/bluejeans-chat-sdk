@@ -1,14 +1,16 @@
+//this is a chat app that uses bluejeans chatSDK to send messages over the command line. any app that uses this format will be able to 
+//connect to a bluejeans meeting assuming that the meeting is live and the ID number is known
+
 var chatModule = require('./chatSDK.js');
 readline = require('readline');
 
-var handler =
-		{
-    		onMessage: function(event, edata)
-    		{
-				console.log("Message Received: " + edata.body);
-    		}
-		};
+var handler = {       
+    	          onMessage: function(event, edata) {
+	              console.log("Message Received: " + edata.body);
+    	          }
+	      };
 
+//this is just a quickly written function that will read lines typed on the command line and send them when 'return' is pressed
 function kp() {
 	var word = "";
 	readline.emitKeypressEvents(process.stdin);
@@ -17,32 +19,32 @@ function kp() {
 		switch(key.name)
 		{
 			case 'c':
-				if (key.ctrl) {
-					console.log("\n***done***");
-					chatz.disconnect();
-					process.exit();
-				}else{
-					word = word + key.sequence;
-				    process.stdout.write(key.sequence);
-				}
+			    if (key.ctrl) {
+			        console.log("\n***done***");
+			        chatz.disconnect();
+			        process.exit();
+		            }else{
+		                word = word + key.sequence;
+			        process.stdout.write(key.sequence);
+			    }
 			case 'return':
-    			chatz.sendMessage(word);
-    			word = "";
-				break;
+    			    chatz.sendMessage(word);
+    			    word = "";
+			break;
 			case 'backspace':
-				var len = word.length - 1;
-				word = word.substring(0,len);
-				process.stdout.clearLine();
-				process.stdout.cursorTo(0);
-				process.stdout.write(word);
-				break;
+			    var len = word.length - 1;
+			    word = word.substring(0,len);
+			    process.stdout.clearLine();
+			    process.stdout.cursorTo(0);
+			    process.stdout.write(word);
+			    break;
 			case 'space':
 			    word = word + " ";
 			    process.stdout.write(" ");
 			    break;
 			default:
-				word = word + key.sequence;
-				process.stdout.write(key.sequence);
+			    word = word + key.sequence;
+			    process.stdout.write(key.sequence);
 		}
 	});
 }
