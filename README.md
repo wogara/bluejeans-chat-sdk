@@ -1,4 +1,4 @@
-![GitHub Logo](/images/logo.png)
+
 
 # bluejeans-chat-sdk
 
