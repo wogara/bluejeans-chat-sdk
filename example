@@ -1,1 +1,53 @@
-# why is this not bold
+var chatModule = require('./chatSDK.js');
+readline = require('readline');
+
+var handler =
+		{
+    		onMessage: function(event, edata)
+    		{
+				console.log("Message Received: " + edata.body);
+    		}
+		};
+
+function kp() {
+	var word = "";
+	readline.emitKeypressEvents(process.stdin);
+	process.stdin.setRawMode(true);	
+	process.stdin.on('keypress', function (chunk, key) {
+		switch(key.name)
+		{
+			case 'c':
+				if (key.ctrl) {
+					console.log("\n***done***");
+					chatz.disconnect();
+					process.exit();
+				}else{
+					word = word + key.sequence;
+				    process.stdout.write(key.sequence);
+				}
+			case 'return':
+    			chatz.sendMessage(word);
+    			word = "";
+				break;
+			case 'backspace':
+				var len = word.length - 1;
+				word = word.substring(0,len);
+				process.stdout.clearLine();
+				process.stdout.cursorTo(0);
+				process.stdout.write(word);
+				break;
+			case 'space':
+			    word = word + " ";
+			    process.stdout.write(" ");
+			    break;
+			default:
+				word = word + key.sequence;
+				process.stdout.write(key.sequence);
+		}
+	});
+}
+
+var chatz = new chatModule.chatSDK();
+chatz.onReceiveMessage(handler);
+chatz.connectToMeeting("990842284");
+kp();
