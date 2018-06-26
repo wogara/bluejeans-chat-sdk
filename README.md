@@ -1,3 +1,5 @@
+![Alt text](downloads/927.png?raw=true "Title")
+
 # bluejeans-chat-sdk
 
 this SDK enables users to easily integrate the bluejeans chat feature into any application
