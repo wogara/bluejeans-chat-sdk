@@ -42,6 +42,9 @@ var message = "Welcome to the Chat!";
 
 chatz.sendMessage(message);
 
+# Terminate
+chatz.disconnect() will disconnect from the bluejeans meeting and no messages will be sent or received until it is reconnected.
+
 
 
 
