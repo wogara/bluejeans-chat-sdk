@@ -26,6 +26,8 @@ var handler =
     			}
 			
 		};
+		
+var chatModule = require('./chatSDK.js');
 
 var meetingID = "123456789";
 
